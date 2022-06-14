@@ -1,0 +1,84 @@
+    <div class="flex-container" *ngIf="professor != undefined">
+         <mat-card class="matcard1">
+    
+           <mat-card-header>         
+             <mat-card-title>
+               Detalhes Professor 
+             </mat-card-title>
+            </mat-card-header>
+
+          <div class="header">
+             <mat-card-content>
+                 <h3> {{ professor.nome }} </h3> 
+               <mat-card-subtitle>
+                   {{ professor.email }}
+               </mat-card-subtitle>
+             </mat-card-content>
+     
+             <mat-card-content>
+               <h4>
+                 Carreira
+               </h4>
+               <mat-card-subtitle>
+                  {{ this.professor.bootcamp?.nome }}
+               </mat-card-subtitle>
+             </mat-card-content>
+          </div>
+    
+
+          <div class="body">
+            <mat-card-content>
+                <h4>
+                  Habilidades <br> Técnicas: 
+                </h4>
+                <mat-card-subtitle *ngFor="let h of professor.habilidadeTecnica">
+                {{ h.nome }}
+              </mat-card-subtitle>
+            </mat-card-content>
+    
+            
+            <mat-card-content *ngFor="let t of professor.turmaBootcamp">
+              <h4>
+                Turma:
+              </h4>
+              <mat-card-subtitle >
+                <strong>nome:</strong>  {{ t.nome }}
+              </mat-card-subtitle>
+              <mat-card-subtitle >
+                <strong>data início:</strong>  {{ t.dataInicio | date: 'dd/MM/yyyy' }} 
+              </mat-card-subtitle>
+              <mat-card-subtitle >
+                <strong>data término:</strong>  {{ t.dataTermino | date: 'dd/MM/yyyy'}}
+              </mat-card-subtitle>
+              <mat-card-subtitle >
+                <strong> status:</strong>  {{ t.status | date: 'dd/MM/yyyy'}}
+              </mat-card-subtitle>
+            </mat-card-content>
+    
+            
+    
+            <mat-card-content *ngIf="professor.extensao != null">
+              <h4>
+                Extensão:
+              </h4>
+              <mat-card-subtitle>
+               <strong>nome:</strong>  {{ professor.extensao?.nome }}
+              </mat-card-subtitle>
+              <mat-card-subtitle>
+                <strong>especialidade:</strong> {{ professor.extensao?.especialidade }}
+              </mat-card-subtitle>
+              <mat-card-subtitle>
+                <strong>data início:</strong> {{ professor.extensao?.dataInicio }}
+              </mat-card-subtitle>
+              <mat-card-subtitle>
+                <strong>data término:</strong> {{ professor.extensao?.dataTermino }}
+              </mat-card-subtitle>
+              <mat-card-subtitle>
+                <strong>status:</strong> {{ professor.extensao?.status }}
+              </mat-card-subtitle>
+            </mat-card-content>
+          </div>
+    
+          </mat-card>
+          <button mat-raised-button color="primary" mat-dialog-close> Voltar </button>
+        </div>

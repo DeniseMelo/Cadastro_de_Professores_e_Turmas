@@ -1,0 +1,73 @@
+.container{
+/*     display: flex;
+    flex-direction: column; */
+/*     align-items: center; */
+/*     justify-content: space-evenly;
+    height: 100%; */
+    width: 100%;
+}
+
+#botoes{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#b100{
+    background-color: #0cb4823a;
+    font-weight: 500;
+    font-size: larger;
+    width: 300px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    grid-area: head1;
+    border: 2px solid rgba(4, 123, 65, 0.116);
+    
+}
+#b50{
+
+    background-color: #f0d5093e;
+    font-weight: 500;
+    font-size: larger;
+    width: 300px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    grid-area: head2;
+    border: 2px solid rgba(123, 107, 4, 0.156);
+}
+#b0{
+
+    background-color: #ff000026;
+    font-size: larger;
+    font-weight: 500;
+    width: 300px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    grid-area: head3;
+    border: 2px solid rgba(123, 4, 4, 0.093);
+}
+
+.substituto{
+    width: 300px;
+    height: 100px;
+/*     border: dashed 5px blue; */
+}
+
+.grid{
+    display: grid;
+    width: 100%;
+    grid-template-areas:
+    "head1 head2 head3"
+    "main1 main2 main3";
+    grid-template-columns: 350px 350px 350px;
+    justify-content: center;
+}
+
+.a100{
+    grid-area: main1;
+}
+
+.a50{
+    grid-area: main2;
+}
+
+.a0{
+    grid-area: main3;
+}

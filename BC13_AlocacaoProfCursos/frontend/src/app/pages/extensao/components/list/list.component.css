@@ -1,0 +1,76 @@
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700");
+
+.mat-form-field {
+  font-size: 14px;
+  width: 70%;
+  margin-top: 20px;
+  margin-right: auto;
+  margin-left: 180px;
+}
+
+.container {
+  width: 80%;
+  margin-top: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+table {
+  width: 100%;
+
+}
+
+h1 {
+  text-align: center;
+}
+
+.tab {
+  display: none;
+}
+
+.tab-wrap {
+  min-width: 320px;
+  max-width: 100%;
+  padding: 5px;
+  margin: 0 auto;
+}
+
+label {
+  display: inline-block;
+  margin: 0 0 -1px;
+  padding: 15px 25px;
+  font-weight: 600;
+  text-align: center;
+  color: #bbb;
+  border: 1px solid transparent;
+  border-bottom: 1px solid #bbb;
+
+}
+
+label:before {
+  font-family: fontawesome;
+  font-weight: normal;
+  margin-right: 10px;
+}
+
+label:hover {
+  color: #888;
+  cursor: pointer;
+}
+
+input:checked+label {
+  color: #555;
+  border-bottom: 2px solid rgb(69, 49, 158);
+}
+
+.btn {
+  width: 40%;
+  margin-top: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+ }

@@ -1,0 +1,22 @@
+<div id="container">
+    <div class="container mt-2">
+        <div class="row flex-column" >
+            <div class="bg-primary col-2 my-2 bg-light text-center w-20 rounded card d-flex float-left"
+                style="box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;" *ngFor="let item of professores">
+                <div class="g-0">
+                    <p class="card-text" id="nome" style="font-weight: 900; color: #06343f">
+                        {{item.nome}}
+                    </p>
+                    <img src="https://cdn1.iconfinder.com/data/icons/occupations-3/100/21-512.png" width="55px" class="prof">
+                    <div>
+                        <div class="card-body">
+                            <p class="card-text text-dark">{{item.email}}</p>
+                        </div>
+                    </div>
+                </div>
+<!--                 <div class="progress mb-1" style="background-color:rgba(191, 33, 33, 0.168)">
+                    <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+                  </div> -->
+            </div>
+        </div>
+    </div></div>

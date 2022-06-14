@@ -1,0 +1,40 @@
+<div class="grid">
+  <div class="header">
+    <img src="" alt="Cole sua logo aqui">
+  </div>
+  <div class="flex-container-login">
+
+    <mat-card id="box">
+      <h1>Conecte-se</h1>
+      <mat-card-content class="login">
+          <form action="" id="main-form" [formGroup]="usuario" (ngSubmit)="submit(loginInput.value)">
+              <div class="corpo">
+
+                  <mat-form-field appearance="fill">
+                    <mat-label>Username</mat-label>
+                    <input type="text" matInput #loginInput formControlName="login">
+                  </mat-form-field>
+
+
+                  <mat-form-field appearance="fill">
+                    <mat-label>Senha</mat-label>
+                    <input type="password" matInput formControlName="password" class="rSenha">
+                  </mat-form-field>
+
+
+                  <button mat-raised-button type="submit" color="primary">
+                    Entrar
+                  </button>
+
+              </div>
+          </form>
+      </mat-card-content>
+    </mat-card>
+
+  </div>
+  <div class="footer">
+    <span><a href="">©Nome da Empresa</a></span>
+  </div>
+</div>
+
+<!-- Teste -->

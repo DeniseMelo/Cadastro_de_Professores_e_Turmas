@@ -1,0 +1,24 @@
+#container{
+    height: 50%;
+    width: 100%;
+}
+
+.progress-bar{
+    background-color: rgba(198, 32, 54, 0.745);
+}
+
+.card{
+    width: 300px !important;
+    background-color: rgba(255, 0, 0, 0.015) !important;
+    border: 2px solid rgba(255, 0, 25, 0.278);
+    background-color: white !important;
+    
+    }
+    
+.prof{
+    background-color: white !important;
+    border-radius: 50% !important;
+    border: 2px solid rgba(255, 0, 25, 0.367);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+ 

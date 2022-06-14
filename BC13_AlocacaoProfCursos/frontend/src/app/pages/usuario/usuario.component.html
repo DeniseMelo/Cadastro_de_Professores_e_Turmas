@@ -1,0 +1,22 @@
+<app-main-nav>
+  <div class="flex-container" *ngIf="usuario != undefined">
+
+    <mat-card>
+      <mat-card-content>
+        <button class="btn" mat-mini-fab color="accent" routerLink="/home">
+          <mat-icon>
+            arrow_back
+          </mat-icon>
+        </button>
+        <mat-card-title>
+          Usuario Ativo: {{ usuario.login }}
+        </mat-card-title>
+
+
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <app-lista-usuario></app-lista-usuario>
+
+</app-main-nav>
+

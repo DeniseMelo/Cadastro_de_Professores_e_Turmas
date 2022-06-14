@@ -1,0 +1,32 @@
+<mat-card class="card">
+  <mat-card-header>
+    <mat-card-title id="título" class="text-center">Atribuir bootcamp a um professor</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form action="" [formGroup]="formAlocacao" (ngSubmit)="submit()">
+      <div class="form">
+      <mat-form-field appearance="outline" class="mx-2">
+        <mat-label>Escolha um bootcamp</mat-label>
+        <mat-select name="t" formControlName="turma">
+          <mat-option *ngFor="let turma of turmas" [value]="turma.idTurmaBootcamp">
+            {{turma.nome}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="mx-1">
+        <mat-label>Escolha um professor</mat-label>
+        <mat-select name="p" formControlName="professor">
+          <mat-option *ngFor="let professor of professores" [value]="professor.idProfessor">
+            {{professor.nome}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <button type="submit" class="mx-2">
+        <mat-icon>check_circle_outline</mat-icon>
+      </button>
+    </div>
+    </form>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,29 @@
+<div class="container">
+  <mat-card class="card">
+    <mat-card-header>
+      <mat-card-title id="título">Cadastrar Novo Usuário</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form action="" [formGroup]=" formCadastro" (ngSubmit)="submit()" >
+
+        <mat-form-field class="input" appearance="outline">
+          <mat-label>Login</mat-label>
+          <input type="text" matInput placeholder="Digite o login..." formControlName="login" />
+        </mat-form-field>
+        <mat-form-field class="input" appearance="outline">
+          <mat-label>Senha</mat-label>
+          <input type="password" matInput placeholder="Digite a senha..." formControlName="password" />
+        </mat-form-field>
+
+        <button type="submit" class="btn1" mat-raised-button color="accent">
+          Cadastrar
+        </button>
+
+        <button type="reset" class="btn" mat-raised-button >
+          Limpar Formulário
+        </button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+  <button class="btn2"  mat-raised-button type="button" (click)="sair()">Voltar</button>
+</div>

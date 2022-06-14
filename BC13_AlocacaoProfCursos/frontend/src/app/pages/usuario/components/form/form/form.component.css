@@ -1,0 +1,35 @@
+.mat-card {
+    height: 66%;
+    width: 90%;
+}
+
+.mat-card-header {
+    justify-content: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.container {
+    height: 89vh;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 35%;
+    align-items: center;
+}
+
+.btn2{
+    width: 60%;
+    background-color: #0f637a;
+    color: white;
+}
+
+.btn{
+    background-color: #0f637a;
+    color: white;
+}

@@ -1,0 +1,54 @@
+<app-main-nav>
+
+
+  <div class="container">
+    <mat-card class="card">
+      <mat-card-header>
+        <mat-card-title id="título">Editar Bootcamp</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <form action="#" [formGroup]="formCadastro" *ngIf="formCadastro">
+
+          <mat-form-field class="input" appearance="outline">
+            <mat-label>Nome da Turma</mat-label>
+            <input type="text" matInput formControlName="turma" name="turma"/>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label> Nome da Carreira </mat-label>
+            <mat-select formControlName="carreira" name="carreira"  (selectionChange)="pegarIdBootcamp()">
+              <mat-option *ngFor="let item of carreiras" [value]="item.idBootcamp" >{{item.nome}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field class="inputDate" appearance="outline">
+            <mat-label>Data de início do Bootcamp</mat-label>
+            <input type="date" matInput formControlName="dataInicio" name="dataInicio"  (input)="chamarCalculoDataTermino()" [value]="dataInicio | date: 'yyyy-MM-dd'"/>
+          </mat-form-field>
+
+          <mat-form-field class="inputDate" appearance="outline">
+            <mat-label>Data do término do Bootcamp</mat-label>
+            <input type="date" matInput formControlName="dataFim" name="dataTermino" (input)="chamarCalculoDataInicio()" [value]="dataTermino | date: 'yyyy-MM-dd'"/>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label> Status </mat-label>
+            <mat-select formControlName="status" name="status">
+              <mat-option *ngFor="let item of status" [value]="item.value"> {{ item.viewValue }} </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+
+          <button type="submit" (click)="submit()" class="btn b2" mat-raised-button color="accent">
+            Editar
+          </button>
+
+       <!--    <button type="reset" class="btn" mat-raised-button color="accent">
+            Limpar Formulário
+          </button> -->
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <button class="btn2" mat-raised-button type="button" routerLink="/bootcamp">Voltar</button>></app-main-nav>

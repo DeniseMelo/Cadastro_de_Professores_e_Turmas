@@ -1,0 +1,19 @@
+.progress-bar{
+    background-color: #0c647b;
+    background-color: #0cb481;
+}
+
+.card{
+    width: 300px !important;
+    background-color: rgba(13, 255, 0, 0.015) !important;
+    border: 2px solid #0ca97a6d;
+    background-color: white !important;
+    }
+
+.prof{
+
+        background-color: white !important;
+        border-radius: 50% !important;
+        border: 2px solid #0ca97a95;
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px; 
+    }

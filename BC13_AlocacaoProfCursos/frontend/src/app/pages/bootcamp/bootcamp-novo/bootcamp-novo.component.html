@@ -1,0 +1,58 @@
+<app-main-nav>
+
+<div class="container">
+  <mat-card class="card">
+    <mat-card-header>
+      <mat-card-title id="título">Cadastro de Novo Bootcamp</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form action="#" [formGroup]="formCadastro" (ngSubmit)="cadastrarNovaTurma()">
+
+        <mat-form-field class="input" appearance="outline">
+          <mat-label>Nome da Turma</mat-label>
+          <input type="text" matInput placeholder="Digite o nome da Turma..." formControlName="nome" name="nome" />
+        </mat-form-field>
+        
+        <mat-form-field appearance="outline">
+          <mat-label> Nome da Carreira </mat-label>
+          <mat-select formControlName="carreira" name="carreira" (selectionChange)="pegarIdBootcamp()">
+            <mat-option *ngFor="let item of listaCursos" [value]="item.idBootcamp">
+              {{ item.nome }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="inputDate" appearance="outline">
+          <mat-label>Data de início do Bootcamp</mat-label>
+          <input type="date" matInput formControlName="dataInicio" name="dataInicio" (input)="chamarCalculoDataTermino()" [value]="dataInicio | date: 'yyyy-MM-dd'"/>
+        </mat-form-field>
+
+        <mat-form-field class="inputDate" appearance="outline">
+          <mat-label>Data do término do Bootcamp</mat-label>
+          <input type="date" matInput formControlName="dataFim" name="dataTermino" (input)="chamarCalculoDataInicio()" [value]="dataTermino | date: 'yyyy-MM-dd'"/>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label> Status </mat-label>
+          <mat-select formControlName="status" name="status" >
+
+            <mat-option *ngFor="let item of listaDeCarreiras" [value]="item">{{item}}</mat-option>
+
+          </mat-select>
+        </mat-form-field>
+
+
+        <button type="submit" (click)="cadastrarNovaTurma()"  class="btn b2" mat-raised-button color="primary">
+          Cadastrar
+        </button>
+
+        <!-- <button type="reset" class="btn" mat-raised-button color="primary">
+          Limpar Formulário
+        </button> -->
+      </form>
+    </mat-card-content>
+    <button class="btn2" color="primary"mat-raised-button type="button" routerLink="/bootcamp">Voltar</button>
+  </mat-card>
+</div>
+
+</app-main-nav>

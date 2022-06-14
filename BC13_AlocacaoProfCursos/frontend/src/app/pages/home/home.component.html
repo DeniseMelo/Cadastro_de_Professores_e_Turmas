@@ -1,0 +1,20 @@
+<app-main-nav>
+  <div class="botao100"></div>
+  <div class="botao50"></div>
+  <div class="botoes mt-2 justify-content-center">
+      <div id="botoes"></div>
+    </div>
+
+    <div class="grid">
+      <div id="b100" class="text-center rounded mx-4 my-2">Professores 100% disponíveis</div>
+    <app-profs100 class="a100 mx-4"></app-profs100>
+    <mat-divider [vertical]="true"></mat-divider>
+
+    <div id="b50" class="text-center rounded mx-4 my-2">Professores 50% disponíveis</div>
+    <app-profs50 class="a50 mx-4" *ngIf="botao50"></app-profs50>
+    <mat-divider [vertical]="true"></mat-divider>
+
+    <div id="b0" class="text-center rounded mx-4 my-2">Professores indisponíveis</div>
+    <app-profs0 class="a0 mx-4" *ngIf="botao0"></app-profs0>
+  </div>
+  </app-main-nav>

@@ -1,0 +1,30 @@
+.container {
+  width: 850px;
+  margin-top: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+  table{
+    width: 100%;
+  }
+
+  .mat-form-field {
+    font-size: 14px;
+    width: 70%;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: 180px;
+  }
+
+.btn {
+    width: 40%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}

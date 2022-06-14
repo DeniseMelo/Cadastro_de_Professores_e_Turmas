@@ -1,0 +1,80 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+  background-color: #0F637A;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #0F637A;
+  box-shadow: rgba(255, 255, 255, 0.06) 0px 30px 60px -12px inset, rgba(255, 255, 255, 0.035) 0px 18px 36px -18px inset;
+
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.user-icon{
+  display: flex;
+  align-items: center;
+}
+
+img {
+  border-radius: 50%;  
+}
+
+#menu{
+  color: white;
+  font-size: larger;
+  box-shadow: rgba(255, 255, 255, 0.06) 0px 30px 60px -12px inset, rgba(255, 255, 255, 0.035) 0px 18px 36px -18px inset;
+}
+
+.menu{
+  color: white; 
+  box-shadow: rgba(255, 255, 255, 0.06) 0px 30px 60px -12px inset, rgba(255, 255, 255, 0.035) 0px 18px 36px -18px inset;
+
+}
+
+.alocacao{
+margin-left: 35%;
+margin-right: 35%;
+/* text-align: center; */
+}
+
+#soulcode-logo{
+/*   display: block;
+  margin: 0 auto; */
+/*   padding-left: 35%; */
+  border-radius: 0;
+  height: 70%;
+}
+#centerlogo{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.active{
+  background-color: #8ccde486;
+  border: 2px #ffffff4d solid;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  box-shadow: rgba(0, 0, 0, 0.185) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;  
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.mat-list-base{
+  padding: 0;
+}

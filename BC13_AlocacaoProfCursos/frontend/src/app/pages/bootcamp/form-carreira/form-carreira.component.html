@@ -1,0 +1,35 @@
+
+  <div class="container">
+    <mat-card class="card">
+        <mat-card-header>
+            <mat-card-title id="título">Cadastro de Nova Carreira</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <form action="#"  [formGroup]="formCadastro"  >
+              
+
+                <mat-form-field class="input" appearance="outline">
+                    <mat-label>Carreira</mat-label>
+                    <input type="text" matInput placeholder="Digite o nome da Carreira..." formControlName="nome"
+                        name="nome" />
+                </mat-form-field>
+                <mat-form-field class="input" appearance="outline">
+                    <mat-label>Tempo de Duração</mat-label>
+                    <input type="number" matInput  placeholder="O tempo deve ser adicionado em semanas" formControlName="duracao" name="duracao">
+                </mat-form-field>
+
+                <mat-form-field  class="input" appearance="outline">
+                    <mat-label>Duração Projeto Final</mat-label>
+                    <input type="number" matInput placeholder="O tempo deve ser adicionado em semanas" formControlName="duracaoProjetoFinal" name="duracaoProjetoFinal">
+                </mat-form-field>
+
+
+                <button type="submit" (click)="onsubmit()" class="btn b2" mat-raised-button color="primary">
+                    Cadastrar
+                </button>
+
+            </form>
+        </mat-card-content>
+        <button class="btn2" color="primary" mat-raised-button type="button" routerLink="/bootcamp">Voltar</button>
+    </mat-card>
+</div>

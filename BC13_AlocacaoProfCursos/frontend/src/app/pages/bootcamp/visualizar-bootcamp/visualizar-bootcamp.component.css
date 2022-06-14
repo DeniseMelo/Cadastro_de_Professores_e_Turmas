@@ -1,0 +1,31 @@
+.container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+
+  /* width: 100vw;
+  height: 100vh; */
+}
+
+.example-card {
+  max-width: 600px;
+  margin-bottom: 8px;
+
+  background-color:#c4c4c494 ;
+}
+
+.btn {
+
+  width: 27%;
+  margin-top: 20px;
+  margin-right: auto;
+  margin-left: auto;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+  background-color: #FFDD009C;
+}

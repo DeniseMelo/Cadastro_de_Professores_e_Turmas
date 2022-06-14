@@ -1,0 +1,41 @@
+<app-main-nav>
+
+<div class="container">
+
+  <mat-card>
+
+        <h3>Editar Professor</h3>
+
+        <form action=""  [formGroup]="formEdit" (ngSubmit)="submit()" >
+          <mat-form-field  appearance="outline">
+            <mat-label>Nome do Professor</mat-label>
+            <input type="text" matInput formControlName="nome">
+          </mat-form-field>
+
+          <mat-form-field  appearance="outline">
+            <mat-label>E-mail do Professor</mat-label>
+            <input type="email" matInput formControlName="email">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label> Habilidade Técnica </mat-label>
+            <mat-select formControlName="habilidadeTecnica" name="habilidade">
+              <mat-option *ngFor="let h of habilidadesTecnicas" [value]="h.idHabilidadeTecnica" > {{ h.nome }} </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label> Nome da Carreira </mat-label>
+            <mat-select formControlName="carreira" name="carreira">
+              <mat-option *ngFor="let c of carreiras" [value]="c.idBootcamp" > {{ c.nome }} </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <div class="botoes">
+            <div class="progress-bar"  role="progressbar" [style.width]="" ></div>
+            <button mat-raised-button color="accent" type="submit" style="margin-top: 10px;"> Editar </button>
+            <button mat-raised-button color="primary" type="submit" style="margin-top: 10px;" routerLink="/professor"> Voltar </button>
+          </div>
+      </form>
+    </mat-card>
+</div></app-main-nav>

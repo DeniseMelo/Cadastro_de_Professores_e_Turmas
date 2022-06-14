@@ -1,0 +1,19 @@
+.titulo{
+    text-align: center !important;
+}
+.form{
+    display: flex;
+    flex-direction: row;
+}
+button{
+    margin: auto;
+    border: none;
+    background-color: transparent;
+    padding-bottom: 10px;
+
+
+}
+
+mat-icon{
+    font-size: xx-large;
+}

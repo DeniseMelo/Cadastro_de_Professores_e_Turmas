@@ -1,0 +1,26 @@
+
+
+  <div class="container">
+  <mat-card class="example-card">
+    <mat-card-title-group>
+      <mat-card-title>Informações Bootcamp</mat-card-title>
+    </mat-card-title-group>
+    <mat-card-content>
+      
+      <h6>Carreira: {{ alimentaDialog.bootcamp?.nome }} </h6>
+      <h6>Data Inicio: {{ alimentaDialog.dataInicio | date: 'dd/MM/yyyy' }} </h6>
+      <h6>Data Término: {{ alimentaDialog.dataTermino | date: 'dd/MM/yyyy' }} </h6>
+      <h6>Status: {{ alimentaDialog.status }} </h6>
+      <mat-list>
+        <h6>Professores: </h6>
+        <mat-list-item *ngFor="let p of alimentaProfs">
+          {{ p.nome }}
+        </mat-list-item>
+      </mat-list>
+    
+    </mat-card-content>
+  </mat-card>
+  
+  <button class="btn" mat-raised-button type="button" mat-dialog-close>Fechar</button>
+  </div>
+

@@ -1,0 +1,13 @@
+<app-main-nav>
+  <div class="flex-container" *ngIf="extensao!= undefined">
+  <button mat-mini-fab color="primary" routerLink="/extensao">
+  </button>
+  <mat-card>
+    <mat-card-content>
+      <mat-card-title>
+        {{ extensao.nome}}
+        {{ extensao.especialidade}}
+      </mat-card-title>
+    </mat-card-content>
+  </mat-card>
+</div></app-main-nav>

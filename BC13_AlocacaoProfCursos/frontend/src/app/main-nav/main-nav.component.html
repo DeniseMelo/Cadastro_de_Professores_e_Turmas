@@ -1,0 +1,52 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async)   ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar id="menu">Menu</mat-toolbar>
+
+    <mat-nav-list>
+      <a class="menu" mat-list-item routerLink="/home" [routerLinkActive]="['active']">Home</a>
+      <a class="menu" mat-list-item routerLink="/professor" [routerLinkActive]="['active']">Professores</a>
+      <a class="menu" mat-list-item routerLink="/bootcamp" [routerLinkActive]="['active']">Bootcamps</a>
+      <a class="menu" mat-list-item routerLink="/extensao" [routerLinkActive]="['active']">Extensões</a>
+      <a class="menu" mat-list-item routerLink="/alocacao" [routerLinkActive]="['active']">Alocação</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <div id="centerlogo">
+      <img src="" alt="Cole sua logo aqui" id=""></div>
+      <span class="spacer"></span>
+      <div class="dropdown">
+        <div class="user-icon" mat-button [matMenuTriggerFor]="menu" style="cursor: pointer">
+          <img src="https://p.kindpng.com/picc/s/10-104902_simple-user-icon-user-icon-white-png-transparent.png" width= "48px" alt="user-icon"/>
+          <span class="material-icons">expand_more</span>
+          <mat-menu #menu="matMenu" >
+
+            <button mat-menu-item routerLink="/{{ user }}" >
+              <strong>Usuario:</strong>
+              {{ user }}
+            </button>
+
+           <button mat-menu-item (click)="logout()">
+            <strong> Sair </strong>
+            </button>
+
+          </mat-menu>
+        </div>
+      </div>
+    </mat-toolbar>
+    <ng-content></ng-content>
+    <router-outlet>
+    </router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

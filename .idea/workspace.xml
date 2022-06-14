@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="92e0bd68-ccd9-4241-9cb3-6fc76c5a42e9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/BC13_AlocacaoProfCursos/AlocacaoDeProfessores/AlocacaoDeProfessores/src/main/java/SoulCode/AlocacaoDeProfessores/Services/ProfessorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BC13_AlocacaoProfCursos/AlocacaoDeProfessores/AlocacaoDeProfessores/src/main/java/SoulCode/AlocacaoDeProfessores/Services/ProfessorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BC13_AlocacaoProfCursos/AlocacaoDeProfessores/AlocacaoDeProfessores/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/BC13_AlocacaoProfCursos/AlocacaoDeProfessores/AlocacaoDeProfessores/src/main/resources/application.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/BC13_AlocacaoProfCursos" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="29qEkhwRwvToMFFHeXAoAhLi70a" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/denise/Desktop/projetoFinal&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="92e0bd68-ccd9-4241-9cb3-6fc76c5a42e9" name="Changes" comment="" />
+      <created>1653832360049</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1653832360049</updated>
+    </task>
+    <servers />
+  </component>
+</project>

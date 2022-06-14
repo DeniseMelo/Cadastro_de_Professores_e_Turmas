@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+.grid{
+  height: 100vh;
+  display: grid;
+  grid-template-rows:15% 70% 15% ;
+  grid-template-areas:
+  "header"
+  "flex-container-login"
+  "footer";
+
+}
+
+.header{
+  grid-area: header;
+  background: #0F637A;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.flex-container-login{
+  grid-area: flex-container-login;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.footer{
+  grid-area: footer;
+  background: #0F637A;
+  color: #BAC1C7;
+  font-size:20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer a {
+  color: #88CEE4;
+  text-decoration: none;
+
+}
+
+#box h1 {
+
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  font-family: 'Karla', sans-serif;
+  color: #373a3b;
+  font-weight: 700;
+}
+.corpo button {
+  margin-top: 2rem;
+  max-width: 250px;
+  background: rgb(241, 196, 15);
+  border:none;
+  border-radius: 1rem;
+  font-size: 1rem;
+  color: #FFFFFF;
+}
+
+@keyframes button-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.corpo button:hover {
+  background: rgb(241, 230, 15);
+  color: #373a3b;
+  animation-name: button-animation;
+  animation-duration: 0.5s;
+}
+
+
+#box{
+
+  box-shadow: 0.1px 0.1px 5px 0.1px;
+  border-radius:25px;
+}
+
+.corpo{
+  display: flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  padding: 20px;
+  margin-top: 1.5rem;
+}
+
+.corpo .mat-form-field{
+  width: 100%;
+  background: hsla(0, 0%, 100%, 0.103);
+}
+

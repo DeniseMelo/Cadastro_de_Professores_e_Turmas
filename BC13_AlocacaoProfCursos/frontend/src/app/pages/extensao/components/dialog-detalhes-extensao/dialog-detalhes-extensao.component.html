@@ -1,0 +1,26 @@
+
+  <div class="container">
+    <mat-card class="example-card">
+      <mat-card-title-group>
+        <mat-card-title> <strong>  Informações Bootcamp </strong> </mat-card-title>
+      </mat-card-title-group>
+      <mat-card-content>
+        
+        <h6> <strong> Extensao: </strong>  {{ extensao.nome }} </h6>
+        <h6> <strong> Especialidade </strong> {{ extensao.especialidade }} </h6>
+        <h6> <strong> Data Início: </strong> {{ extensao.dataInicio| date: 'dd/MM/yyyy' }} </h6>
+        <h6> <strong> Data Término: </strong> {{ extensao.dataTermino| date: 'dd/MM/yyyy' }} </h6>
+        <h6> <strong> Status: </strong> {{ extensao.status }} </h6>
+        <mat-list>
+          <h6> <strong> Professores: </strong></h6>
+          <mat-list-item *ngFor="let p of professores">
+            <h6> {{ p.nome }} </h6> 
+          </mat-list-item>
+        </mat-list>
+      
+      </mat-card-content>
+    </mat-card>
+    
+    <button class="btn" mat-raised-button type="button" mat-dialog-close>Fechar</button>
+    </div>
+  

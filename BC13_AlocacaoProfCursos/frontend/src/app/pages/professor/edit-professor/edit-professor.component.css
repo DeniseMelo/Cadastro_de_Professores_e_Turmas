@@ -1,0 +1,30 @@
+mat-card{
+  width: 42%;
+  height: 94%;
+}
+
+
+.container mat-card form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+}
+
+.botoes{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  width: 80%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 89vh;
+}

@@ -1,0 +1,83 @@
+<mat-form-field appearance="standard">
+  <mat-label>Pesquisar</mat-label>
+  <input matInput (keyup)="applyFilter($event)" placeholder="Ex. pesquisar" #input>
+</mat-form-field>
+
+<div class="mat-elevation-z8 card-s">
+  <div class="tab-wrap">
+
+      <input type="radio" (click)="mostrarTodosBootcamps()" checked id="tab1" name="tabGroup1" class="tab">
+      <label for="tab1">Todos</label>
+      <input type="radio" (click)="porStatus('ABERTA')" id="tab2" name="tabGroup1" class="tab">
+      <label for="tab2">Abertos</label>
+      <input type="radio" (click)="porStatus('PROXIMATURMA')" id="tab3" name="tabGroup1" class="tab">
+      <label for="tab3">Proximos</label>
+      <input type="radio" (click)="porStatus('ENCERRADA')" id="tab4" name="tabGroup1" class="tab">
+      <label for="tab4">Encerrados</label>
+
+  </div>
+  <div class="example-container">
+  <table mat-table [dataSource]="dataSource">
+
+    <!-- ID Column -->
+    <ng-container matColumnDef="id" sticky>
+        <th mat-header-cell *matHeaderCellDef style="text-align: center;"> ID </th>
+        <td mat-cell *matCellDef="let element"> {{element.idTurmaBootcamp}} </td>
+    </ng-container>
+
+    <!--Turma Column -->
+    <ng-container matColumnDef="turma">
+        <th mat-header-cell *matHeaderCellDef style="text-align: center; "> Turma </th>
+        <td mat-cell *matCellDef="let element"> {{element.nome}} </td>
+    </ng-container>
+
+    <!-- carreira Column -->
+    <ng-container matColumnDef="carreira">
+        <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Carreira </th>
+        <td mat-cell *matCellDef="let element"> {{element.bootcamp.nome}} </td>
+    </ng-container>
+
+    <!-- dataInicio Column -->
+    <ng-container matColumnDef="dataInicio">
+        <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Data Inicio </th>
+        <td mat-cell *matCellDef="let element"> {{element.dataInicio |  date: 'dd/MM/yyyy'}} </td>
+    </ng-container>
+
+    <!-- dataFinal Column -->
+    <ng-container matColumnDef="dataFinal">
+        <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Data Final </th>
+        <td mat-cell *matCellDef="let element"> {{element.dataTermino |  date: 'dd/MM/yyyy'}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="status">
+        <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Status </th>
+        <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="acoes" stickyEnd>
+        <th mat-header-cell *matHeaderCellDef style="text-align: center;">Ações</th>
+        <td mat-cell *matCellDef="let element">
+            <button mat-icon-button color="accent" routerLink="/editar/{{element.idTurmaBootcamp}}">
+                <mat-icon>edit</mat-icon>
+            </button>
+            <button mat-icon-button color="warn" (click)="excluirBootcamp(element.idTurmaBootcamp)" style="margin-left: 10px;">
+                <mat-icon>delete</mat-icon>
+            </button>
+            <button mat-icon-button color="accent" (click)="abrirDialog(element.idTurmaBootcamp)" style="margin-left: 10px;">
+                <mat-icon>visibility</mat-icon>
+            </button>
+        </td>
+    </ng-container>
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let element; columns: displayedColumns;"></tr>
+
+    <!-- Row shown when there is no matching data. -->
+    <tr class="mat-row" *matNoDataRow>
+        <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+    </tr>
+  </table>
+  <mat-paginator class="paginator" [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+  </div>
+</div>

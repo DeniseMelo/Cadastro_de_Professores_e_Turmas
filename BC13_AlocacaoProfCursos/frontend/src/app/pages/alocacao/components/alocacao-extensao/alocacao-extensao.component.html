@@ -1,0 +1,32 @@
+<mat-card class="card">
+  <mat-card-header>
+    <mat-card-title id="titulo" class="mx-auto">Atribuir extensão a um professor</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form action="" [formGroup]="formAlocacao" (ngSubmit)="submit()" class="d-flex">
+
+      <mat-form-field appearance="outline" class="mx-2">
+        <mat-label>Escolha uma extensão</mat-label>
+        <mat-select name="e" formControlName="extensao">
+          <mat-option *ngFor="let extensao of extensoes" [value]="extensao.idExtensao">
+            {{extensao.nome}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="mx-2">
+        <mat-label>Escolha um professor</mat-label>
+        <mat-select name="p" formControlName="professor">
+          <mat-option *ngFor="let professor of professores" [value]="professor.idProfessor">
+            {{professor.nome}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <button type="submit" class="mx-1" (click)="submit()">
+      <mat-icon>check_circle_outline</mat-icon>
+      </button>
+
+    </form>
+  </mat-card-content>
+</mat-card>
