@@ -1,6 +1,16 @@
 #PROJETO FINAL -ALOCAÇÃO PROFESSORES
 
-> Status: Em desenvolvimento⚠️🚧
+<div align="center">
+<img src="imagens/Captura de tela de 2022-06-13 16-44-45.png" width="700px" />
+</div>
+
+<div align="center">
+<img src="imagens/Captura de tela de 2022-06-14 12-04-29.png" width="700px" />
+</div>
+<div align="center">
+<img src="imagens/Captura de tela de 2022-06-14 12-04-46.png" width="700px" />
+</div>
+
 
 
 <a name="a"></a>
